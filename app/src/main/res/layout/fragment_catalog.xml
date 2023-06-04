@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car_view"
+    tools:context=".CatalogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyleCap"
+            android:text="ООО ТЕХОСМОТР"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/infoBtn"
+            style="@style/BtnStyleCatalog"
+            android:background="@drawable/btn_catalog"
+            android:text="О ПУНКТЕ ТЕХОСМОТРА"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regimBtn"
+            style="@style/BtnStyleCatalog"
+            android:background="@drawable/btn_catalog"
+            android:text="РЕЖИМ РАБОТЫ"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/busesBtn"
+            style="@style/BtnStyleCatalog"
+            android:background="@drawable/btn_catalog"
+            android:text="ГРАФИК ПРИЕМА АВТОБУСОВ"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/priceBtn"
+            style="@style/BtnStyleCatalog"
+            android:background="@drawable/btn_catalog"
+            android:text="СТОИМОСТЬ ПРОВЕРКИ "/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/recordBtn"
+            style="@style/BtnStyleCatalog"
+            android:background="@drawable/btn_catalog"
+            android:text="ОНЛАЙН - ЗАПИСЬ"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--стиль для текстового поля - шапка ( верхнее поле - ЗАГОЛОВОК )-->
+<resources>
+    <style name="TextViewStyleCap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">#081247</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

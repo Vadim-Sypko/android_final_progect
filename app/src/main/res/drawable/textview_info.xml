@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- фон для текстового поля-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:centerColor="#EEBE7E"/>
+                <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</selector>
