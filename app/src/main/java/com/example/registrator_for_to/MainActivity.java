@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mainFrame = findViewById(R.id.mainFrame); // находим переменую
         fragmentManager = getSupportFragmentManager(); // обращаемся к фрагмент менеджеру
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); //
-        fragmentTransaction.add(R.id.mainFrame, new AuthFragment()).commit();  // у fragmentTransaction, вызываем метод add и добавляем на экран новый фрагмент
+        fragmentTransaction.add(R.id.mainFrame, new FirstFragment()).commit();  // у fragmentTransaction, вызываем метод add и добавляем на экран новый фрагмент
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {

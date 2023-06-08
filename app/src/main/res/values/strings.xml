@@ -3,5 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_to">ООО "Tехосмотр"</string>
-
+    <string name="address">353100, Краснодарский край , ст. Выселки , ул. Димитрова д.2</string>
+    <string name="phone">8-86157-72795</string>
+    <string name="email">tehosmotr201@gkto.ru</string>
 </resources>

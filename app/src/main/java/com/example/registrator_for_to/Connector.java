@@ -17,7 +17,7 @@ public class Connector {
     private static  String response; // ответ от сервера будем сохранять в переменную response
     public static void connect(){  // медот для соединения с сервером
         try {
-            socket = new Socket("10.10.10.132", 9537); // создаем сокет
+            socket = new Socket("192.168.1.112", 9537); // создаем сокет
             in = new DataInputStream(socket.getInputStream()); // поток ввода
             out = new DataOutputStream(socket.getOutputStream()); // поток вывода
         } catch (IOException e) {
@@ -33,6 +33,21 @@ public class Connector {
             out.writeUTF(jsonObject.toString()); // отправляем на сервер
             response = in.readUTF(); // получаем ответ от сервера
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response.equals("success");
+    }
+    public static boolean reg(String name, String login, String pass){
+        try {
+            jsonObject.put("action", "reg");
+            jsonObject.put("name", name);
+            jsonObject.put("login", login);
+            jsonObject.put("pass", pass);
+            out.writeUTF(jsonObject.toString()); // Отправляем на сервер наш JSON
+            response = in.readUTF(); // Читаем ответ
+        }  catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();

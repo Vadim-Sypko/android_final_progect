@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car_view"
+    tools:context=".FirstFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="271dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:foreground="@drawable/loga_to"
+            android:background="@drawable/image"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regBtn"
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="top|center"
+            android:background="@drawable/btn_line"
+            android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/authBtn"
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_line"
+            android:text="АВТОРИЗОВАТЬСЯ"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

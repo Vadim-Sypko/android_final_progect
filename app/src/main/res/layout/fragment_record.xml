@@ -13,15 +13,16 @@
         android:text="ВЫБЕРИТЕ КАТЕГОРИЮ АВТО"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"/>
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginTop="110dp"
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/imageBtnCatA"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="110dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/categoria_a"
             android:layout_gravity="top|center"
             android:backgroundTint="@null"
@@ -29,8 +30,8 @@
         <ImageButton
             android:id="@+id/imageBtnCatB"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="200dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/categoria_b"
             android:layout_gravity="top|center"
             android:backgroundTint="@null"
@@ -38,8 +39,8 @@
         <ImageButton
             android:id="@+id/imageBtnCatC"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="290dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/categoria_c"
             android:layout_gravity="top|center"
             android:backgroundTint="@null"
@@ -47,8 +48,8 @@
         <ImageButton
             android:id="@+id/imageBtnCatD"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="380dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/categoria_d"
             android:layout_gravity="top|center"
             android:backgroundTint="@null"
@@ -56,12 +57,13 @@
         <ImageButton
             android:id="@+id/imageBtnCatE"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="470dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/categoria_e"
             android:layout_gravity="top|center"
             android:backgroundTint="@null"
             android:background="@null"/>
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backBtnRecoder"
