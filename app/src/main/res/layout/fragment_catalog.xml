@@ -45,8 +45,9 @@
             android:id="@+id/recordBtn"
             style="@style/BtnStyleCatalog"
             android:background="@drawable/btn_catalog"
-            android:text="ОНЛАЙН - ЗАПИСЬ"
-            />
+            android:text="ОНЛАЙН - ЗАПИСЬ" />
+
+
 
     </LinearLayout>
 

@@ -40,7 +40,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/loginEditText"
+            android:id="@+id/regloginEditText"
             android:layout_width="335dp"
             android:layout_height="50dp"
             android:layout_gravity="top|center"
@@ -51,7 +51,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/passEditText"
+            android:id="@+id/regpassEditText"
             android:layout_width="335dp"
             android:layout_height="50dp"
             android:layout_gravity="top|center"

@@ -1,5 +1,6 @@
 package com.example.registrator_for_to;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -28,8 +29,8 @@ public class RegFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     EditText nameEditText;
-    EditText loginEditText;
-    EditText passEditText;
+    EditText regloginEditText;
+    EditText regpassEditText;
     AppCompatButton regBtn;
 
     public RegFragment() {
@@ -63,20 +64,21 @@ public class RegFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reg, container, false);
         nameEditText = view.findViewById(R.id.nameEditText);
-        loginEditText = view.findViewById(R.id.loginEditText);
-        passEditText = view.findViewById(R.id.passEditText);
+        regloginEditText = view.findViewById(R.id.regloginEditText);
+        regpassEditText = view.findViewById(R.id.regpassEditText);
         regBtn = view.findViewById(R.id.regBtn);
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = nameEditText.getText().toString();   // сщздаем строковую переменную name и читаем введенную пользователем информацию
-                String login = loginEditText.getText().toString(); // создаем строковую переменную login и читаем введеную пользователем информацию
-                String pass = passEditText.getText().toString();// создаем строковую переменную pass и читаем введеную пользователем информацию
+                String login = regloginEditText.getText().toString(); // создаем строковую переменную login и читаем введеную пользователем информацию
+                String pass = regpassEditText.getText().toString();// создаем строковую переменную pass и читаем введеную пользователем информацию
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -86,14 +88,14 @@ public class RegFragment extends Fragment {
                                 public void run() {
                                     FragmentTransaction fragmentTransaction = MainActivity.fragmentManager.beginTransaction();
                                     fragmentTransaction.replace(R.id.mainFrame,new CatalogFragment()).commit();// у fragmentTransaction, вызываем метод replace и заменяем экран на новый фрагмент
-                                    Toast.makeText(getActivity().getApplicationContext(), "Вы успешно авторизовались", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity().getApplicationContext(), "Вы успешно зарегистрировались", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }else{
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(getActivity().getApplicationContext(), "Неправильный логин или пароль", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity().getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }

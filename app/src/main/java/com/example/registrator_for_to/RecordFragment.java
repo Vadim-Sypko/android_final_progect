@@ -1,10 +1,14 @@
 package com.example.registrator_for_to;
 
+import static com.example.registrator_for_to.MainActivity.fragmentManager;
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -12,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,7 +40,7 @@ public class RecordFragment extends Fragment {
     ImageButton imageBtnCatD;
     ImageButton imageBtnCatE;
     AppCompatButton backBtnRecoder;
-
+    ImageButton imageBtnL;
     public RecordFragment() {
         // Required empty public constructor
     }
@@ -77,10 +83,45 @@ public class RecordFragment extends Fragment {
         imageBtnCatD = view.findViewById(R.id.imageBtnCatD);
         imageBtnCatE = view.findViewById(R.id.imageBtnCatE);
         backBtnRecoder = view.findViewById(R.id.backBtnRecoder);
+        imageBtnCatA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+                bottomSheetFragment.show(fragmentManager,bottomSheetFragment.getTag());
+            }
+        });
+        imageBtnCatB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetFragmentB bottomSheetFragmentB = new BottomSheetFragmentB();
+                bottomSheetFragmentB.show(fragmentManager, bottomSheetFragmentB.getTag());
+            }
+        });
+        imageBtnCatC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottonSheetFragmentC bottomSheetFragmentC = new BottonSheetFragmentC();;
+                bottomSheetFragmentC.show(fragmentManager, bottomSheetFragmentC.getTag());
+            }
+        });
+        imageBtnCatD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetFragmentD bottomSheetFragmentD = new BottomSheetFragmentD();
+                bottomSheetFragmentD.show(fragmentManager, bottomSheetFragmentD.getTag());
+            }
+        });
+        imageBtnCatE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetFragmentE bottomSheetFragmentE = new BottomSheetFragmentE();
+                bottomSheetFragmentE.show(fragmentManager, bottomSheetFragmentE.getTag());
+            }
+        });
         backBtnRecoder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = MainActivity.fragmentManager.beginTransaction();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.mainFrame, new CatalogFragment()).commit();
                 Toast.makeText(getActivity(), "Успех", Toast.LENGTH_SHORT).show();
             }
@@ -89,4 +130,6 @@ public class RecordFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
+
 }

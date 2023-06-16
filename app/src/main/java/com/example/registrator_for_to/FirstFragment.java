@@ -67,7 +67,6 @@ public class FirstFragment extends Fragment {
         regBtn = view.findViewById(R.id.regBtn);
         authBtn = view.findViewById(R.id.authBtn);
         FragmentTransaction fragmentTransaction = MainActivity.fragmentManager.beginTransaction();
-
         authBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +79,6 @@ public class FirstFragment extends Fragment {
                 fragmentTransaction.replace(R.id.mainFrame,new RegFragment()).commit();
             }
         });
-
         // Inflate the layout for this fragment
         return view;
     }
